@@ -3,7 +3,7 @@ import time
 import datetime
 import pywhatkit as kit
 now=datetime.datetime.now()
-phnum=str(input("Numar de telefon "))
+phnum=str(input("Phone number "))
 h=now.hour
 if now.minute==59:
     m=0
