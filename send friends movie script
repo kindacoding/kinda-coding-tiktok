@@ -1,0 +1,19 @@
+import pyautogui
+import time
+import datetime
+import pywhatkit as kit
+now=datetime.datetime.now()
+phnum=str(input("Numar de telefon "))
+h=now.hour
+if now.minute==59:
+    m=0
+else:
+    m=now.minute+1
+phonnumber=str('+4')
+phonumber=phonnumber+phnum
+kit.sendwhatmsg(phonumber,'hey',21,58)
+time.sleep(5)
+f = open('message.txt',"r")
+for word in f:
+    pyautogui.typewrite(word)
+    pyautogui.press("enter")
