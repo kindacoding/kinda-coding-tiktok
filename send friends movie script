@@ -5,13 +5,14 @@ import pywhatkit as kit
 now=datetime.datetime.now()
 phnum=str(input("Phone number "))
 h=now.hour
-if now.minute==59:
+if now.minute==58:
+    h=h+1
     m=0
 else:
     m=now.minute+2
 phonnumber=str('+4')
 phonumber=phonnumber+phnum
-kit.sendwhatmsg(phonumber,'hey',21,58)
+kit.sendwhatmsg(phonumber,'hey',h,m)
 time.sleep(5)
 f = open('message.txt',"r")
 for word in f:
